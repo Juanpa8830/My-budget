@@ -23,20 +23,20 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_01_201855) do
     t.index ["user_id"], name: "index_categories_on_user_id"
   end
 
-  create_table "transactions", force: :cascade do |t|
+  create_table "categories_movements", id: false, force: :cascade do |t|
+    t.bigint "movement_id"
+    t.bigint "category_id"
+    t.index ["category_id"], name: "index_categories_movements_on_category_id"
+    t.index ["movement_id"], name: "index_categories_movements_on_movement_id"
+  end
+
+  create_table "movements", force: :cascade do |t|
     t.string "name"
     t.decimal "amount"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_transactions_on_user_id"
-  end
-
-  create_table "transactions_categories", id: false, force: :cascade do |t|
-    t.bigint "transaction_id"
-    t.bigint "category_id"
-    t.index ["category_id"], name: "index_transactions_categories_on_category_id"
-    t.index ["transaction_id"], name: "index_transactions_categories_on_transaction_id"
+    t.index ["user_id"], name: "index_movements_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -58,5 +58,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_01_201855) do
   end
 
   add_foreign_key "categories", "users"
-  add_foreign_key "transactions", "users"
+  add_foreign_key "movements", "users"
 end
