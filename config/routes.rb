@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   root 'splashs#index'
-  resources :splashs, only: [:index, :show]
-
+  resources :categories, only: [:index, :show, :new, :create] do
+    resources :movements, only: [:new, :index]
+  end
 end
