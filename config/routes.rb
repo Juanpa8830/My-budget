@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   # root "articles#index"
   root 'splashs#index'
   resources :categories, only: [:index, :show, :new, :create] do
-    resources :movements, only: [:new, :index]
+    resources :movements, only: [:new, :create, :destroy]
   end
 end
