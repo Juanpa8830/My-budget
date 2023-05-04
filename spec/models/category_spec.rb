@@ -22,7 +22,7 @@ RSpec.describe Category, type: :model do
 
   context 'Testing associations' do
     it 'Should belong to a user' do
-      @category =Category.reflect_on_association(:user)
+      @category = Category.reflect_on_association(:user)
       expect(@category.macro).to eq(:belongs_to)
     end
 

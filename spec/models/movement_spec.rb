@@ -22,14 +22,14 @@ RSpec.describe Category, type: :model do
     it 'movement amount should be decimal' do
       expect(@movement.amount).to be_a_kind_of(BigDecimal)
     end
-   
+
     it 'Should have a user' do
       expect(@movement.user_id).to be_present
     end
   end
 
   context 'Testing associations' do
-      it 'Should have and many and belongs to movements' do
+    it 'Should have and many and belongs to movements' do
       @movement = Movement.reflect_on_association(:categories)
       expect(@movement.macro).to eq(:has_and_belongs_to_many)
     end

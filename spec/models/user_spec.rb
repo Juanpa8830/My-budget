@@ -5,9 +5,8 @@ RSpec.describe User, type: :model do
     @user = User.create(id: 1, name: 'Juan Pablo', email: 'juanpa@gmail.com', encrypted_password: '123456')
   end
 
-
   context 'Testing validations' do
-     it 'User should have a name' do
+    it 'User should have a name' do
       expect(@user.name).to be_present
     end
 

@@ -15,7 +15,7 @@ RSpec.describe 'categories/show', type: :feature do
   end
 
   it 'displays App name' do
-    expect(page).to have_content("TRANSACTIONS")
+    expect(page).to have_content('TRANSACTIONS')
   end
 
   it 'displays category name' do

@@ -1,6 +1,6 @@
 class MovementsController < ApplicationController
-    before_action :set_category
-    before_action :authenticate_user!
+  before_action :set_category
+  before_action :authenticate_user!
 
   def new
     @current_user = current_user
@@ -30,6 +30,7 @@ class MovementsController < ApplicationController
       format.html { redirect_to category_path(@category), notice: 'movement deleted successfully' }
     end
   end
+
   private
 
   def set_category
@@ -39,6 +40,4 @@ class MovementsController < ApplicationController
   def entity_params
     params.require(:movement).permit(:name, :amount, category_id: [])
   end
-
-
 end

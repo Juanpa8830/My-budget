@@ -15,7 +15,7 @@ RSpec.describe 'categories/index', type: :feature do
   end
 
   it 'displays App name' do
-    expect(page).to have_content("CATEGORIES")
+    expect(page).to have_content('CATEGORIES')
   end
 
   it 'displays user name' do
