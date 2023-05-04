@@ -1,27 +1,29 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <img src="jprecipe.png" alt="logo" width="300P"  height="auto" />
+  <img src="./public/budgetlogo.png" alt="logo" width="300P"  height="auto" />
   <br/><br/>
 
-  <h2><b>Recipe App</b></h2>
+  <h2><b>My Budget</b></h2>
 
   <br/>
 
 </div>
 
 <!-- TABLE OF CONTENTS -->
-
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+    - [Live Demo](#demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
+  - [Install](#install)
   - [Usage](#usage)
+  - [Run tests](#run-tests)
+
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -29,110 +31,99 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 📖 Recipe-App <a name="about-project"></a>
+<!-- PROJECT DESCRIPTION -->
 
-**Recipe-App** Recipes is a user-friendly web application designed to allow users to efficiently manage their personal collection of recipes. It is built using Ruby on Rails and Ruby programming language, and styled with CSS and HTML. The application has been thoroughly tested with various test suites to ensure its reliability and functionality.
+# 📖 My budget <a name="about-project"></a>
+
+**My-budget** is a mobile web application where you can admin your own budget: you have a list of movements associated with a category, so that you can see the record of your expenses.
 
 ## 🛠 Built With <a name="built-with"></a>
 
-### Tech Stack <a name="tech-stack"></a>
 
-This project was implemented using:
-
-<details>
-  <summary>Client</summary>
   <ul>
-    <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
+    <li><a href="https://www.ruby-lang.org/en/documentation/">Ruby on Rails</a></li>
   </ul>
-</details>
 
-<details>
-  <summary>Server</summary>
-  <ul>
-    <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
-  </ul>
-</details>
 
-<details>
-<summary>Database</summary>
-  <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
-  </ul>
-</details>
+<!-- Features -->
 
 ### Key Features <a name="key-features"></a>
 
-- **Can persist user data to database**
-- **Can persist posts data to database**
-- **Can persist comments and likes database**
+- **Users can register**
+- **Users can create categories**
+- **Users can add operations to one or more categories**
+- **Full stack app**
+- **Styled using CSS**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Live Demo <a name="demo"></a>
+- Check out the [live demo]()
+- [Live presentation video]()
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-To get a local copy up and running, follow these steps:
+To get the content of this project locally you need to run the following commands in your terminal:
+
+and follow these steps.
 
 ### Prerequisites
 
-## Install
-
-- bundle install
-- rails db:create
-- rails db:migrate
-
-In order to run this project you need to have installed:
-
-- [ ] You’ll need to have Ruby and Rails on your machine.
-
-Optionally, in order to modify this project you should to have installed:
-
-- [ ] Git.
-
-- [ ] Code editor like: [Visual Studio code](https://code.visualstudio.com/), [Sublime text](https://www.sublimetext.com/) or others...
-
-
-## Run tests
-
-To run the tests run the following commands:
-
-Install gems
-- ruby
-  bundle install
-
-Run tests
-- ruby
-  rspec spec
+- IDE(code editor) like: **Vscode**, **Sublime**, etc.
+- [Git](https://www.linode.com/docs/guides/how-to-install-git-on-linux-mac-and-windows/)
 
 ### Setup
 
-To clone this repository to your desired folder:
+Clone this repository to your desired folder:
 
-- You can download the **Zip** file from the GitHub repository, or clone the repository with:
-
-```console
-git clone https://github.com/PierreBarba/BlogApp.git
+1. Download the **Zip** file or clone the repo with:
+ ```bash
+git clone git@github.com:juanpa8830/my.budget.git
+```
+2. To access cloned directory run:
+```bash
+cd my-budget 
 ```
 
-- Access the cloned directory with:
+### Install
 
-```console
-cd blog-app
+> To install linters and other project's dependencies run:
+
+```bash
+ bundle install
 ```
-
-- Open it with your favorite code editor or with the live server
 
 ### Usage
 
-To run the project, execute the following command in the project directory:
-
-```console
+To run the project, execute the following command:
+```bash
 rails server
 ```
 
+### Run tests
+
+For tracking linter errors in Ruby files run:
+ 
+ ```
+   rubocop .
+ ```
+
+This project uses Rspec for testing, to run the tests use the command:
+ 
+ ```
+   Rspec spec
+ ```
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- AUTHORS -->
 
-## 👥 Author <a name="authors"></a>
+## 👥 Authors <a name="authors"></a>
 
 👤 **Juan Pablo Guerrero**
 
@@ -141,23 +132,25 @@ rails server
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- FUTURE FEATURES -->
+
 ## 🔭 Future Features <a name="future-features"></a>
 
-We will implement this on the future:
-
-- [ ] **Users can login to blog app**
-- [ ] **Users can add a post**
-- [ ] **Users can see a post list**
+- - [ ] **Add editig function**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
 
 ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/PierreBarba/BlogApp.git).
+Feel free to check the [issues page](https://github.com/juanpa8830/my-budget/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- SUPPORT -->
 
 ## ⭐️ Show your support <a name="support"></a>
 
@@ -165,15 +158,19 @@ Give a ⭐️ if you like this project!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🙏 Acknowledgments <a name="acknowledgements"></a>
+<!-- ACKNOWLEDGEMENTS -->
 
-- [Microverse Team and classmates](https://www.microverse.org/).
-- [Gregoire Vella](https://www.behance.net/gregoirevella).
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+The original design idea for this project was made by [Gregoire Vella on Behance](https://www.behance.net/gregoirevella). 
+
+I would like to thank the Microverse team for starting me in this project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
 
-<p align="right">(<a href="#readme-top">back to top</a>)<
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
