@@ -1,6 +1,7 @@
 <div class="splash">
   <div class="splash-title">
-  <img src="<%= asset_path('budgetlogo.png') %>" alt="logo">
+  
+  <%= image_tag '/budgetlogo.png'%>
   </div>
   <div class="splash-buttons-container">
     <%= button_to "LOG IN", new_user_session_path, class: "splash-button" %>
