@@ -1,0 +1,43 @@
+<section class="categories-container">
+  <div class="categories-header">
+    <div class ="back-arrow">
+      <%= link_to categories_path do %>
+        <%= image_tag "back_arrow.png", alt: "Back Arrow", class: "back-arrow-img" %>
+      <% end %>
+    </div>
+    <h2>TRANSACTIONS</h2>
+    <div class ="home">
+    <%= link_to 'Home', categories_path, class: "Home" %>
+    </div>
+  </div>
+
+  <div class="category-details-container">
+    <div class="category-container">
+      <div class="mov-icon">
+        <%= image_tag @category.icon, alt: "category Icon", class: "movement-img"%>
+      </div>
+      <div class="cat-info-container">
+        <h3 class="category-name"><%= @category.name %></h3>
+        <hr class="spacer">
+      </div>
+      <div class="value">
+         <p class="total">TOTAL</p>
+         <p class="cat-amount">$<%= @category.movements.sum(:amount) %></p>
+      </div>
+    </div>
+    
+    <div class="entities-container">
+      <% @movements.each do |mov| %>
+        <div class="mov-container">
+          <p class="mov-name"><%= mov.name %></p>
+          <hr class="mov-spacer">
+          <p class="mov-value">$ <%= mov.amount %></p>
+          <%= link_to "X", category_movement_path(@category), class: "delete-mov", data: { turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+        </div>
+      <% end %>
+    </div>
+    <div class="new-mov-container">
+      <%= link_to "ADD A MOVEMENT", new_category_movement_path(@category), class: "new-mov" %>
+    </div>
+  </div>
+</section>
