@@ -58,7 +58,7 @@
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Live Demo <a name="demo"></a>
-- Check out the [live demo]()
+- Check out the [live demo](https://my-budget-nkk7.onrender.com)
 - [Live presentation video]()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
