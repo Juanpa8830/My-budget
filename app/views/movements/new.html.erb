@@ -1,0 +1,28 @@
+<%= form_with model: @movement, url: category_movements_path(@category), method: :post, local: true, html: { class: "new-entity-form" } do |f| %>
+  <div class="new-entity-header">
+    <div class ="back-arrow">
+      <%= link_to category_path(@category) do %>
+        <%= image_tag "back_arrow.png", alt: "Back Arrow", class: "back-arrow-img" %>
+      <% end %>
+    </div>
+    <h2>ADD MOVEMENT</h2>
+    <%= f.submit "ADD", class: "submit-new-mov" %>
+  </div>
+  <div class = "new-mov-body">
+    <div class="field-name-new-entity">
+      <%= f.text_field :name, autocomplete: "Entity name", placeholder: "Name", class: "login-field" %>
+    </div>
+    <div class="field-name-new-entity">
+      <%= f.text_field :amount, autocomplete: "Amount", placeholder: "Amount", class: "login-field" %>
+    </div>
+    <div class="field-name-new-entity">
+      <% @categories.each do |category| %>
+        <p>
+        <% if category.id == params[:category_id].to_i %>
+            <%= f.check_box :category_id, { multiple: true, checked: true, hidden: true }, category.id, nil %>
+          <% end %>
+        </p>
+      <% end %>
+    </div>
+  </div>
+<% end %>
