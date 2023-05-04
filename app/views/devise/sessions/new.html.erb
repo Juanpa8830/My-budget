@@ -1,26 +1,23 @@
-<h2>Log in</h2>
-
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
-
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "loginForm" }) do |f| %>
+  <div class="loginHeader">
+    <div class ="backArrow">
+      <%= link_to root_path do %>
+      <%= image_tag "back_arrow.png", alt: "Back Arrow", class: "back-arrow-img"%>
+      <% end %>
     </div>
-  <% end %>
+    <h2>LOGIN</h2>
+    <%= f.submit "Log in", class: "submitLogin" %>
+  </div>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
+  <div class="email">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "email-field"%>
+  </div>
+
+  <div class="password">
+    <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", class: "password-field"%>
+  </div>
+
+  <div>
+    <p class="forgotDummy">Forgot password?</p>
   </div>
 <% end %>
-
-<%= render "devise/shared/links" %>
