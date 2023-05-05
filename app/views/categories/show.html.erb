@@ -32,7 +32,7 @@
           <p class="mov-name"><%= mov.name %></p>
           <hr class="mov-spacer">
           <p class="mov-value">$ <%= mov.amount %></p>
-          <%= link_to "X", category_movement_path(@category), class: "delete-mov", data: { turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+          <%= link_to "X", category_movement_path(@category, mov), class: "delete-mov", data: { turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
         </div>
       <% end %>
     </div>
