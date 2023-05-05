@@ -59,7 +59,7 @@
 
 ### Live Demo <a name="demo"></a>
 - Check out the [live demo](https://my-budget-nkk7.onrender.com)
-- [Live presentation video]()
+- [Live presentation video](https://www.loom.com/share/c475fc215829410f99276b40b4bd9094)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
