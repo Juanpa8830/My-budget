@@ -17,12 +17,8 @@
     </div>
     <div class="field-name-new-entity">
       <% @categories.each do |category| %>
-        <p>
-        <% if category.id == params[:category_id].to_i %>
-            <%= f.check_box :category_id, { multiple: true, checked: true, hidden: true }, category.id, nil %>
-          <% end %>
-        </p>
-      <% end %>
+        <p><%= f.check_box :category_id, { multiple: true, checked: false, hidden: false }, category.id, nil %><%= category.name %></p>
+       <% end %>
     </div>
   </div>
 <% end %>
