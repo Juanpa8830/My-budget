@@ -1,0 +1,39 @@
+<section class="categories-container">
+  <div class="categories-header">
+      <div class ="exit">
+      <%= button_to '< Sign out', destroy_user_session_path, method: :delete, class: 'delete-btn' %>
+       </div>
+      <h2>CATEGORIES</h2>
+      <div class ="search">
+        <%= image_tag "search.png", alt: "Search Icon", class: "search-img"%>
+      </div>
+  </div>
+  
+  <ul class="categories">
+ 
+  <% @categories.each do |category| %>
+    <% if user_signed_in? && category.user_id == current_user.id %>
+     <li class="category-container">
+     <div class="cat-icon">
+     <%= image_tag category.icon, alt: "category Icon", class: "category-img"%>
+     </div>
+        <div class="category-info-container">
+            <h3>
+                <%= link_to category.name, category_path(category), { class: "category-name" } %>
+            </h3>
+            <hr class="spacer">
+            <p class="category-updated">
+                 <%= category.updated_at.strftime('%d %b %Y')%>
+             </p>  
+        </div>
+            <p class="category-amount">$<%= category.movements.sum(:amount) %></p>
+            
+     </li>
+ <% end %>
+ <% end %>
+</ul>
+<div class="new-category-container">
+ <%= link_to "ADD CATEGORY", new_category_path, class: "new-category" %>
+</div>
+ 
+</section>
